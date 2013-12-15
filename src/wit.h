@@ -8,4 +8,4 @@
 
 #import <Foundation/Foundation.h>
 
-void wit_install() __attribute__((const));
+void wit_install();

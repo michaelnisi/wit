@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "witness"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "write uncaught exception to file"
   s.homepage     = "https://github.com/michaelnisi/wit"
   s.license      = 'MIT'

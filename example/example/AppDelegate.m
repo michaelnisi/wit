@@ -14,8 +14,8 @@
 - (BOOL)
 application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    wit_install();
-    return YES;
+  wit_install();
+  return YES;
 }
 
 @end

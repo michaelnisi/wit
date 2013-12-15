@@ -1,6 +1,6 @@
 # wit - write uncaught exception
 
-The wit [iOS](http://www.apple.com/ios/) library writes the last uncaught exception to a file. Sure, in most cases the beautiful [crashlytics](http://try.crashlytics.com/) is the best choice, but if you hesitate to add dependencies to your code (like me) and just want to keep track of crashes in the wild, you might want something simpler. For this case I wrote this tiny library, which installs an uncaught exception handler, to write some (JSON formatted) information about the exception to a file—with the idea, of course, to do something with it after the next startup (sending it to your server for example).
+The wit [iOS](http://www.apple.com/ios/) library writes the last uncaught exception to a file. Sure, in most cases the beautiful [crashlytics](http://try.crashlytics.com/) is the best choice, but if you hesitate to add dependencies to your code and just want to keep track of crashes in the wild, you might want something simpler. For this case I wrote this tiny library, which installs an uncaught exception handler, to write some (JSON formatted) information about the exception to a file—with the idea, of course, to do something with it after the next startup (sending it to your server for example).
 
 > Can you kick it like I kick it when I kick this,
 can I get a witness?  (Yes you can!)
@@ -16,15 +16,15 @@ can I get a witness?  (Yes you can!)
 - (BOOL)
 application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    wit_install();
-    return YES;
+  wit_install();
+  return YES;
 }
 
 @end
 ```
 ## Output
 
-After an uncaught exception crashed your app, in `Documents/wit.json` you'll find:
+After an uncaught exception crashed your app, in `tmp/wit.json` you'll find:
 
 ```json
 {
